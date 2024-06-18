@@ -36,7 +36,9 @@ public class UIManager : MonoBehaviour
         planetNameText.text = planetName;
         planetInfoText.text = planetInfo;
         infoPanel.SetActive(true);
-        AdjustFontSizeToFit(planetInfoText);
+        // Set fixed font size here
+        planetInfoText.fontSize = 20; // Change this value to your desired font size
+        AdjustRectTransformToFit(planetInfoText);
     }
 
     public void HideInfo()
@@ -88,13 +90,8 @@ public class UIManager : MonoBehaviour
         HideInfo();
     }
 
-    private void AdjustFontSizeToFit(TextMeshProUGUI textMeshProUGUI)
+    private void AdjustRectTransformToFit(TextMeshProUGUI textMeshProUGUI)
     {
-        textMeshProUGUI.enableAutoSizing = true;
-        textMeshProUGUI.fontSizeMin = 10;
-        textMeshProUGUI.fontSizeMax = 36;
-        textMeshProUGUI.alignment = TextAlignmentOptions.TopLeft;
-
         // Adjust RectTransform to fit the text content
         RectTransform rectTransform = textMeshProUGUI.GetComponent<RectTransform>();
         rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, textMeshProUGUI.preferredHeight);
