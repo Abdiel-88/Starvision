@@ -626,12 +626,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 335718816}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &335718816
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1870,12 +1870,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1538273297}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1538273297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2754,12 +2754,12 @@ PrefabInstance:
     - target: {fileID: 7567658347364260452, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -179.00044
+      value: -179.00005
       objectReference: {fileID: 0}
     - target: {fileID: 7567658347364260452, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.165916
+      value: 68.65023
       objectReference: {fileID: 0}
     - target: {fileID: 7645257478013899404, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
@@ -2830,6 +2830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478870160545, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.00006
       objectReference: {fileID: 0}
     - target: {fileID: 7645257478870160546, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
@@ -3251,6 +3256,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7645257480068171395, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.00006
+      objectReference: {fileID: 0}
     - target: {fileID: 7645257480068171396, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3422,7 +3432,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2103154326}
   - component: {fileID: 2103154325}
-  - component: {fileID: 2103154327}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -3461,22 +3470,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2103154327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103154324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d7f28b1be967e1429960942b0f58566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
-  planetNameText: {fileID: 0}
-  planetInfoText: {fileID: 0}
-  cameraControl: {fileID: 0}
 --- !u!1001 &2138629805
 PrefabInstance:
   m_ObjectHideFlags: 0

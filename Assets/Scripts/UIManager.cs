@@ -12,10 +12,23 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        if (infoPanel == null || planetNameText == null || planetInfoText == null || cameraControl == null)
+        Debug.Log("UIManager Start");
+
+        if (infoPanel == null)
         {
-            Debug.LogError("UIManager: One or more references are not set in the Inspector.");
-            return;
+            Debug.LogError("UIManager: Info Panel reference is not set in the Inspector.");
+        }
+        if (planetNameText == null)
+        {
+            Debug.LogError("UIManager: Planet Name Text reference is not set in the Inspector.");
+        }
+        if (planetInfoText == null)
+        {
+            Debug.LogError("UIManager: Planet Info Text reference is not set in the Inspector.");
+        }
+        if (cameraControl == null)
+        {
+            Debug.LogError("UIManager: Camera Control reference is not set in the Inspector.");
         }
 
         infoPanel.SetActive(false); // Ensure the panel is hidden at the start
@@ -33,9 +46,13 @@ public class UIManager : MonoBehaviour
 
     public void ShowInfo(string planetName, string planetInfo)
     {
+        Debug.Log("Showing info for: " + planetName);
         planetNameText.text = planetName;
         planetInfoText.text = planetInfo;
+        Debug.Log("Planet Name Text: " + planetNameText.text);
+        Debug.Log("Planet Info Text: " + planetInfoText.text);
         infoPanel.SetActive(true);
+        Debug.Log("Info panel set active");
         // Set fixed font size here
         planetInfoText.fontSize = 20; // Change this value to your desired font size
         AdjustRectTransformToFit(planetInfoText);
@@ -44,6 +61,7 @@ public class UIManager : MonoBehaviour
     public void HideInfo()
     {
         infoPanel.SetActive(false);
+        Debug.Log("Info panel hidden");
     }
 
     public void OnPlanetButtonClicked(GameObject planet)
@@ -68,10 +86,12 @@ public class UIManager : MonoBehaviour
         PlanetData planetData = databaseManager.GetPlanetByName(planet.name);
         if (planetData != null)
         {
+            Debug.Log("Planet data found: " + planetData.Name);
             ShowInfo(planetData.Name, planetData.Biography);
         }
         else
         {
+            Debug.Log("Planet data not found for: " + planet.name);
             ShowInfo(planet.name, "Planet data not found.");
         }
     }
