@@ -2759,7 +2759,7 @@ PrefabInstance:
     - target: {fileID: 7567658347364260452, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68.65023
+      value: 69.01623
       objectReference: {fileID: 0}
     - target: {fileID: 7645257478013899404, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
@@ -2770,6 +2770,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496198, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -10.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478196496199, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7645257478213451839, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
@@ -2800,6 +2840,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478413461353, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478413461354, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478413461354, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478413461354, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257478413461354, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7645257478484730497, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
@@ -3225,6 +3290,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257479688122118, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257479688122118, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257479688122118, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645257479688122118, guid: b555417177661a64ba51eb8daeca3ae1,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7645257479997668163, guid: b555417177661a64ba51eb8daeca3ae1,
         type: 3}
