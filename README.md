@@ -22,9 +22,9 @@ Starvision is an immersive simulation of the solar system developed using the Un
 - Educational content based on NASA data
 
 ### Team
-- **Raphael Santos**: Backend, Database Manager
-- **Abdiel**: Dev Lead
-- **Ladie**: Frontend, Backend
+- **Raphael Santos**: Backend, Database Manager https://github.com/GoldenHatchet15
+- **Abdiel**: Dev Lead https://github.com/Abdiel-88
+- **Ladie**: Frontend, Backend https://github.com/Eidal559
 
 ### Technologies
 - Unity Game Engine
