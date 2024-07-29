@@ -1,12 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using System.Collections;
 using UnityEngine.Networking;
 
 public class DatabaseManager : MonoBehaviour
 {
-    private string jsonPath;
     private List<PlanetData> planets;
 
     void Awake()
@@ -16,54 +14,53 @@ public class DatabaseManager : MonoBehaviour
 
     private IEnumerator LoadJsonData()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, "planetinfo.json");
+        string filePath = Application.streamingAssetsPath + "/planetinfo.json";
+        Debug.Log("Loading JSON file from path: " + filePath);
 
-        if (filePath.Contains("://") || filePath.Contains(":///"))
+        UnityWebRequest request;
+        #if UNITY_WEBGL && !UNITY_EDITOR
+            // WebGL requires a different path handling
+            request = UnityWebRequest.Get(filePath);
+        #else
+            // Editor and standalone use file:// prefix
+            request = UnityWebRequest.Get("file://" + filePath);
+        #endif
+
+        Debug.Log("Request URL: " + request.url);
+
+        yield return request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success)
         {
-            UnityWebRequest request = UnityWebRequest.Get(filePath);
-            yield return request.SendWebRequest();
-
-            if (request.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError("DatabaseManager: JSON file not found or error in request at " + filePath);
-            }
-            else
-            {
-                string dataAsJson = request.downloadHandler.text;
-                PlanetList loadedData = JsonUtility.FromJson<PlanetList>(dataAsJson);
-                planets = loadedData.planets;
-
-                if (planets != null)
-                {
-                    Debug.Log("DatabaseManager: Loaded " + planets.Count + " planets.");
-                }
-                else
-                {
-                    Debug.LogError("DatabaseManager: Failed to load planets from JSON.");
-                }
-            }
+            Debug.LogError("DatabaseManager: JSON file not found or error in request at " + filePath + " - " + request.error);
         }
         else
         {
-            if (File.Exists(filePath))
+            string dataAsJson = request.downloadHandler.text;
+            Debug.Log("DatabaseManager: JSON data successfully loaded.");
+            Debug.Log("JSON Data: " + dataAsJson);
+
+            try
             {
-                Debug.Log("DatabaseManager: Found JSON file at " + filePath);
-                string dataAsJson = File.ReadAllText(filePath);
                 PlanetList loadedData = JsonUtility.FromJson<PlanetList>(dataAsJson);
                 planets = loadedData.planets;
 
                 if (planets != null)
                 {
                     Debug.Log("DatabaseManager: Loaded " + planets.Count + " planets.");
+                    foreach (var planet in planets)
+                    {
+                        Debug.Log("Planet: " + planet.Name + ", Biography: " + planet.Biography);
+                    }
                 }
                 else
                 {
                     Debug.LogError("DatabaseManager: Failed to load planets from JSON.");
                 }
             }
-            else
+            catch (System.Exception ex)
             {
-                Debug.LogError("DatabaseManager: JSON file not found at " + filePath);
+                Debug.LogError("DatabaseManager: Exception while parsing JSON - " + ex.Message);
             }
         }
     }
